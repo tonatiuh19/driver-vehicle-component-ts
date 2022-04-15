@@ -1,6 +1,14 @@
 import { DropdownSearch } from "../interfaces/Interfaces";
 
-const ResponseToObject = (data: any, query: string) => {
+const ResponseToObject = (
+  data: {
+    vehicleYears: number[];
+    vehicleMakes: string[];
+    vehicleModels: string[];
+    vehicleTrims: string[];
+  },
+  query: string
+) => {
   let objIdArr: DropdownSearch[] = [];
 
   switch (query) {
